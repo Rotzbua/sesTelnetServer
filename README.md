@@ -35,7 +35,7 @@ CONFIGURATION
 
 Edit the sesTelnetServerConfig.h as appropriate:
 
-```
+```arduino
 // Define this to make all the strings live in Flash instead of RAM.
 #define USE_FLASH
 ```
@@ -46,7 +46,7 @@ Edit the sesTelnetServerConfig.h as appropriate:
   had enough free RAM, you could comment this out and the program would run
   faster without all the extra code to access flash storage.
   
-```
+```arduino
 // Define this to include printing basic Telnet protocol information. This
 // will include a bunch of Flash strings.
 #define TELNET_DEBUG // takes about 1176 bytes of Flash + 14 bytes of RAM.
@@ -57,7 +57,7 @@ Edit the sesTelnetServerConfig.h as appropriate:
   what all is going on with Telnet, but there is no reason you would want to
   enable this for production.
 
-```  
+```arduino
 // Define this to use multiserver support,but only if you have fixed your
 // Ethernet library to allow it. See:
 // http://subethasoftware.com/2013/04/09/arduino-ethernet-and-multiple-socket-server-connections/
@@ -73,7 +73,7 @@ Edit the sesTelnetServerConfig.h as appropriate:
   "server is busy, please try later" message will be sent back. Without this,
   connections would just hang and timeout while the server is in use.
 
-```  
+```arduino
 // Configure telnet server MAC address and IP address.
 byte mac[] FLASHMEM = { 0x2A, 0xA0, 0xD8, 0xFC, 0x8B, 0xEF };
 byte ip[] FLASHMEM  = { 192, 168, 0, 200};
@@ -81,7 +81,7 @@ byte ip[] FLASHMEM  = { 192, 168, 0, 200};
 
 * Server MAC address and IP address. Standard Arduino ethernet library stuff.
 
-```
+```arduino
 // Define the ID string sent to the user upon initial connection.
 #define TELNETID  "Sub-Etha Software's Arduino Telnet server."
 
